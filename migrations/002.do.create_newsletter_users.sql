@@ -9,3 +9,6 @@ ALTER TABLE newsletterurls
     ADD COLUMN
         author INTEGER REFERENCES newsletter_users(id)
         ON DELETE SET NULL;
+
+ALTER TABLE newsletterurls 
+RENAME COLUMN author TO user_ref_id;
