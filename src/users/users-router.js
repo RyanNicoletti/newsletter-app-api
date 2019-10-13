@@ -11,7 +11,7 @@ const serializeUser = user => ({
   email: xss(user.email)
 });
 
-usersRouter.route("/users").post(jsonParser, (req, res, next) => {
+usersRouter.route("/").post(jsonParser, (req, res, next) => {
   const { email, password } = req.body;
   const newUser = { email };
 
