@@ -6,6 +6,7 @@ const cors = require("cors");
 const helmet = require("helmet");
 const { NODE_ENV } = require("./config");
 const usersRouter = require("./users/users-router");
+const urlRouter = require("./newsletter-urls/newsletterurl-router");
 
 const app = express();
 
@@ -17,6 +18,7 @@ app.use(helmet());
 // app.use(cors({ origin: CLIENT_ORIGIN }));
 app.use(express.json());
 app.use("/users", usersRouter);
+app.use("/urls", urlRouter);
 
 app.get("/", (req, res) => {
   res.send("hello world");

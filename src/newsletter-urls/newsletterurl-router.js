@@ -18,8 +18,8 @@ urlRouter
   })
   //   post article to db
   .post(jsonParser, (req, res, next) => {
-    const { title, rssurl, user_ref_id } = req.body;
-    const newUrl = { title, rssurl, user_ref_id };
+    const { title, rssUrl } = req.body;
+    const newUrl = { title, rssUrl };
 
     for (const [key, value] of Object.entries(newUrl)) {
       if (value == null) {
