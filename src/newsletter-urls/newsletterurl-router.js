@@ -1,3 +1,4 @@
+const path = require("path");
 const express = require("express");
 const UrlService = require("./newsletterurl-service.js");
 const xss = require("xss");
@@ -5,9 +6,16 @@ const xss = require("xss");
 const urlRouter = express.Router();
 const jsonParser = express.json();
 
+const serializeUrl = url => ({
+  id: url.id,
+  title: xss(url.title),
+  rssurl: xss(url.rssurl),
+  user_ref_id: url.user_ref_id
+});
+
 // ****** getallurls probably not needed for mvp******
 urlRouter
-  .route("/urls")
+  .route("/")
   .get((req, res, next) => {
     const knexInstance = req.app.get("db");
     UrlService.getAllUrls(knexInstance)
@@ -18,8 +26,8 @@ urlRouter
   })
   //   post article to db
   .post(jsonParser, (req, res, next) => {
-    const { title, rssUrl } = req.body;
-    const newUrl = { title, rssUrl };
+    const { title, rssurl, user_ref_id } = req.body;
+    const newUrl = { title, rssurl, user_ref_id };
 
     for (const [key, value] of Object.entries(newUrl)) {
       if (value == null) {
@@ -33,8 +41,8 @@ urlRouter
       .then(url => {
         res
           .status(201)
-          .location(`./urls/${url.id}`)
-          .json(url);
+          .location(path.posix.join(req.originalUrl, `/${url.id}`))
+          .json(serializeUrl(url));
       })
       .catch(next);
   });
