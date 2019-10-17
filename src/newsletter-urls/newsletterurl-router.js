@@ -13,7 +13,6 @@ const serializeUrl = url => ({
   user_ref_id: url.user_ref_id
 });
 
-// ****** getallurls probably not needed for mvp******
 urlRouter
   .route("/")
   .get((req, res, next) => {
