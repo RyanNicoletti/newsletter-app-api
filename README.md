@@ -8,7 +8,7 @@ spammed with weekly newsletters. </p>
 
 ![newsletter app form screenshot](./screenshots/newslettersapp.jpg "add newsletter form")
 
-![newsletter app main page screenshot](images/newsletterapp2.jpg "newsletter list")
+![newsletter app main page screenshot](images/newslettersapp2.jpg "newsletter list")
 
 <h3>Made With:</h3>
 <ul>
