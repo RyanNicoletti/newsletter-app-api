@@ -1,16 +1,19 @@
-<h1>Newsletter Inbox</h1>
+# Newsletter Inbox
 
 <a href="https://ryan-newsletter-app.now.sh/">Live App</a>
 
-<p>"Newsletter Inbox" is a web app that allows users to collect their favorite weekly newsletters
+### About
+
+"Newsletter Inbox" is a web app that allows users to collect their favorite weekly newsletters
 and view them on one page. The app provides an easy-to-use alternative to having your email inbox
-spammed with weekly newsletters. </p>
+spammed with weekly newsletters.
 
-![newsletter app form screenshot](./screenshots/newslettersapp.jpg "add newsletter form")
+<img src="images/newslettersapp2.jpg" alt='newsletter app main page screenshot' width=400>
 
-![newsletter app main page screenshot](images/newslettersapp2.jpg "newsletter list")
+<img src="images/newslettersapp.jpg" alt='form to add newsletter screenshot' width=400>
 
-<h3>Made With:</h3>
+### Made With:
+
 <ul>
 <li>Node.js</li>
 <li>Express.js</li>
