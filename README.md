@@ -19,6 +19,3 @@ spammed with weekly newsletters.
 <li>Express.js</li>
 <li>PostgreSQL (Knex.js)</li>
 </ul>
-Documentation of your API.
-
-Screenshot(s) of your app. This makes your app description much easier to understand.
