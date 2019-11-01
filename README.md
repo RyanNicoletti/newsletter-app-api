@@ -6,9 +6,9 @@
 and view them on one page. The app provides an easy-to-use alternative to having your email inbox
 spammed with weekly newsletters. </p>
 
-![newsletter app form screenshot](../screenshots/newslettersapp.jpg "add newsletter form")
+![newsletter app form screenshot](./screenshots/newslettersapp.jpg "add newsletter form")
 
-![newsletter app main page screenshot](../screenshots/newsletterapp2.jpg "newsletter list")
+![newsletter app main page screenshot](./screenshots/newsletterapp2.jpg "newsletter list")
 
 <h3>Made With:</h3>
 <ul>
